@@ -67,20 +67,8 @@ Search Bar: Use the search functionality to find specific products.
 Product Sorting: Sort products based on different criteria.
 Cart Management: Add or remove items from the cart.
 Checkout: Proceed to payment using Razorpay.
-Project Structure
-text
-/swiggy-clone
-├── /public
-├── /src
-│ ├── /components
-│ ├── /redux-toolkit
-│ ├── /utils
-│ ├── App.js
-│ ├── index.js
-│ └── ...
-├── db.json
-├── package.json
-└── README.md
+
+
 
 Key Components
 Shimmer UI
