@@ -71,32 +71,32 @@ Checkout: Proceed to payment using Razorpay.
 
 
 Key Components
-Shimmer UI
+-**Shimmer UI**
 The Shimmer UI provides a placeholder loading effect while data is being fetched. This enhances user experience by indicating that content is on its way.
 Footer
 A footer component that provides additional navigation and information about the application.
-Swiper Slides
+-**Swiper Slides**
 Utilizes the Swiper library to create a responsive carousel for showcasing featured items or promotions.
-Material-UI Accordion
+-**Material-UI Accordion**
 An accordion component from Material-UI is used for displaying additional information in a collapsible format, improving the organization of content.
-Tailwind CSS
+-**Tailwind CSS**
 Tailwind CSS is used throughout the project for styling, allowing for rapid UI development with utility classes.
-React Router DOM
+-**React Router DOM**
 React Router DOM is employed for navigation between different pages and components, enabling a single-page application experience.
-Redux Toolkit
+-**Redux Toolkit**
 Redux Toolkit is used for managing the global state of the application, particularly for cart management and user authentication.
-Payment Integration with Razorpay
+-**Payment Integration with Razorpay**
 The application integrates Razorpay for processing payments, providing a seamless checkout experience.
-Login/Signup with JSON Server
+-**Login/Signup with JSON Server**
 User authentication is handled through a mock API created with JSON Server, allowing users to sign up and log in.
-Tab Name Change
+-**Tab Name Change**
 Dynamic tab names are implemented to reflect the current page or section, enhancing usability.
-Mock Data in JSON Server
+-**Mock Data in JSON Server**
 Mock data is served using JSON Server, which simulates a real API for development and testing purposes.
-State Lifting
+-**State Lifting**
 State lifting is used to manage shared state between components, ensuring that data flows correctly throughout the application.
-Search and Sort of Products
+-**Search and Sort of Products**
 The application includes functionality to search for products and sort them based on various criteria, enhancing user experience.
-Conclusion
+-**Conclusion**
 This Swiggy clone project demonstrates the use of modern web technologies to build a fully functional food delivery application. It showcases best practices in state management, UI design, and payment integration, making it a valuable resource for developers looking to enhance their skills in React and related technologies.
 Feel free to explore the code and modify it to suit your needs!
