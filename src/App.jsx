@@ -24,8 +24,8 @@ export const App = () => {
   return (
     <BrowserRouter>
 
-        <Navbar  setSearch={setSearch} />
       <Suspense fallback={<Shimmer/>}>
+        <Navbar  setSearch={setSearch} />
         <Routes>
           <Route path='/' element={<Login/>}/>
           <Route path="/home" element={<Home search={search} />} />
