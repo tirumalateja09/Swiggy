@@ -1,9 +1,9 @@
-
-import  { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-import { FoodScrollCDN } from '../utils/constants'; // Ensure this path is correct
+import { FoodScrollCDN } from '../utils/constants'; 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { FoodScrollURL } from '../utils/constants';
+
 
 const HomeFoodScroll = () => {
   const [data, setData] = useState([]);
@@ -36,18 +36,18 @@ const HomeFoodScroll = () => {
 
   return (
     <div className="relative">
-        <h2 className='font-semibold text-black text-2xl ms-24 mt-24'>What's on your mind?</h2>
-      <div className="absolute right-0 top-0 flex space-x-2 bg-white p-2 rounded-full shadow-md me-9 mt-4">
+      <h2 className='font-semibold text-black text-2xl ms-4 mt-4 md:ms-24 md:mt-24'>What's on your mind?</h2>
+      <div className="absolute right-0 top-0 flex space-x-2 bg-white p-2 rounded-full shadow-md me-4 mt-4 md:me-9">
         <FaArrowLeft onClick={() => scroll('left')} className="cursor-pointer" />
         <FaArrowRight onClick={() => scroll('right')} className="cursor-pointer" />
       </div>
       <div className="overflow-x-auto whitespace-nowrap scrollbar-hide" ref={scrollRef}>
-        <div className="grid grid-flow-col auto-cols-max gap-0 mt-14 w-52 h-52 ">
+        <div className="flex space-x-2 mt-14 p-2">
           {data.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-1 inline-block mx-1">
-              <p className="text-gray-500">{item.price}</p>
+            <div key={index} className="bg-white rounded-lg shadow-md p-1 inline-block mx-1 min-w-[150px] md:min-w-[200px]">
+              <p className="text-gray-500 text-sm md:text-base">{item.price}</p>
               {item.imageId && (
-                <img src={`${FoodScrollCDN}${item.imageId}`} alt={item.name} className="w-40 h-40 object-cover rounded-lg" />
+                <img src={`${FoodScrollCDN}${item.imageId}`} alt={item.name} className="w-full h-auto object-cover rounded-lg" />
               )}
             </div>
           ))}

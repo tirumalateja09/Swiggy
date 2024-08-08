@@ -1,5 +1,4 @@
-
-import  { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -31,7 +30,7 @@ const TopResScroll = () => {
 
   return (
     <div className="relative max-w-full">
-      <h2 className="text-2xl font-semibold mb-6 ms-16 text-gray-900 mt-14">Top Restaurant Chains in Hyderabad</h2>
+      <h2 className="text-2xl font-semibold mb-6 ms-4 md:ms-16 text-gray-900 mt-14">Top Restaurant Chains in Hyderabad</h2>
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 flex space-x-2 bg-white p-2 rounded-full shadow-lg z-10">
         <FaArrowLeft onClick={() => scroll('left')} className="cursor-pointer hover:text-orange-500 transition duration-300 text-2xl" />
         <FaArrowRight onClick={() => scroll('right')} className="cursor-pointer hover:text-orange-500 transition duration-300 text-2xl" />
@@ -39,14 +38,20 @@ const TopResScroll = () => {
       <div className="overflow-x-auto whitespace-nowrap scrollbar-hide" ref={scrollRef}>
         <div className="flex space-x-4">
           {topRes.map((ele) => (
-            <div key={ele.info.id} className="bg-white rounded-lg shadow-md p-4 w-96 h-80 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-lg">
+            <div key={ele.info.id} className="bg-white rounded-lg shadow-md p-4 w-72 h-80 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-lg">
               <img src={`${URL}${ele.info.cloudinaryImageId}`} alt={ele.info.name} className="object-cover rounded-lg h-52 w-full mb-2" />
               <div className="text-center">
-                <h1 className="font-semibold text-md mb-1 overflow-hidden text-ellipsis whitespace-normal"><span className='font-bold text-md mb-1 overflow-hidden text-ellipsis whitespace-normal'>RestaurantName:</span>{ele.info.name}</h1>
-                <h2 className="text-gray-800 text-md mb-1 overflow-hidden text-ellipsis whitespace-normal"><span className='font-bold text-md mb-1 overflow-hidden text-ellipsis whitespace-normal' >Location:</span>{ele.info.areaName}</h2>
-                {/* <h2 className="text-gray-600 text-sm mb-1 overflow-hidden text-ellipsis whitespace-normal">{ele.info.costForTwo}</h2>
+                <h1 className="font-semibold text-md mb-1 overflow-hidden text-ellipsis whitespace-normal">
+                  <span className='font-bold'>Restaurant Name:</span> {ele.info.name}
+                </h1>
+                <h2 className="text-gray-800 text-md mb-1 overflow-hidden text-ellipsis whitespace-normal">
+                  <span className='font-bold'>Location:</span> {ele.info.areaName}
+                </h2>
+                {/* 
+                <h2 className="text-gray-600 text-sm mb-1 overflow-hidden text-ellipsis whitespace-normal">{ele.info.costForTwo}</h2>
                 <h2 className="text-gray-600 text-sm mb-1 overflow-hidden text-ellipsis whitespace-normal">{ele.info.cuisines.join(', ')}</h2>
-                <h2 className="text-gray-600 text-sm overflow-hidden text-ellipsis whitespace-normal">{ele.info.avgRating} ★</h2> */}
+                <h2 className="text-gray-600 text-sm overflow-hidden text-ellipsis whitespace-normal">{ele.info.avgRating} ★</h2>
+                */}
               </div>
             </div>
           ))}
@@ -57,4 +62,3 @@ const TopResScroll = () => {
 };
 
 export default TopResScroll;
-

@@ -1,10 +1,13 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserProvider } from './Authentication';
 import { toast } from 'react-toastify';
 
 const Login = () => {
   const navigate = useNavigate();
+  useEffect(()=>{
+    document.title="Login"
+  })
 
   const [loginDetails, setLoginDetails] = useState({
     email: "",
@@ -30,7 +33,9 @@ const Login = () => {
         const userLoggedData = userData.find((ele) => ele.email === loginDetails.email && ele.password === loginDetails.password);
         console.log("from login page ", userLoggedData);
         if (userLoggedData) {
-          toast.success("User logged in successfully..." );
+          // Store logged-in user data in local storage
+          localStorage.setItem('loggedUser', JSON.stringify(userLoggedData));
+          toast.success("User logged in successfully...");
           return navigate('/home');
         } else {
           toast.error("Invalid email or password");

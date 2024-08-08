@@ -9,11 +9,11 @@ export const UserProvider = createContext();
 export const Authentication = ({ children }) => {
 
 
-// const API="http://localhost:3000"
+const API="http://localhost:3000"
 
-const API = process.env.NODE_ENV === 'production' 
-  ? 'https://your-public-api-url.com' 
-  : 'http://localhost:3000';
+// const API = process.env.NODE_ENV === 'production' 
+//   ? 'https://your-public-api-url.com' 
+//   : 'http://localhost:3000';
 
 
     const signup = async (data) => {

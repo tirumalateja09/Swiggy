@@ -89,19 +89,19 @@ const BodyRestaurant = ({ search }) => {
 
   return (
     <>
-      <h1 className='font-semibold text-gray-900 ms-9 mb-8 mt-16 text-2xl md:text-2xl lg:text-2xl'>Restaurants with Online Food Delivery in Hyderabad</h1>
-      <div className='flex mb-9'>
-        <button onClick={clickHandler} className='border border-gray-500 px-6 py-2 rounded-full mx-2 text-md'>Rating 4.0+</button>
-        <button onClick={() => handlePriceFilter(0, 200)} className='border border-gray-500 px-6 py-2 rounded-full mx-2'>Rs0-Rs200</button>
-        <button onClick={() => handlePriceFilter(200, 300)} className='border border-gray-500 px-6 py-2 rounded-full mx-2'>Rs200-Rs300</button>
-        <button onClick={() => handlePriceFilter(300, 400)} className='border border-gray-500 px-6 py-2 rounded-full mx-2'>Rs300-Rs400</button>
-        <button onClick={deliveryTimeHandler} className='border border-gray-500 px-6 py-2 rounded-full mx-2'>Fast Delivery</button>
+      <h1 className='font-semibold text-gray-900 ms-4 mb-8 mt-16 text-2xl md:ms-9 md:text-2xl lg:text-2xl'>Restaurants with Online Food Delivery in Hyderabad</h1>
+      <div className='flex flex-wrap justify-center mb-9'>
+        <button onClick={clickHandler} className='border border-gray-500 px-4 py-2 rounded-full mx-2 my-2 text-sm md:text-md'>Rating 4.0+</button>
+        <button onClick={() => handlePriceFilter(0, 200)} className='border border-gray-500 px-4 py-2 rounded-full mx-2 my-2 text-sm md:text-md'>Rs0-Rs200</button>
+        <button onClick={() => handlePriceFilter(200, 300)} className='border border-gray-500 px-4 py-2 rounded-full mx-2 my-2 text-sm md:text-md'>Rs200-Rs300</button>
+        <button onClick={() => handlePriceFilter(300, 400)} className='border border-gray-500 px-4 py-2 rounded-full mx-2 my-2 text-sm md:text-md'>Rs300-Rs400</button>
+        <button onClick={deliveryTimeHandler} className='border border-gray-500 px-4 py-2 rounded-full mx-2 my-2 text-sm md:text-md'>Fast Delivery</button>
         
         {/* Custom Sort Dropdown */}
-        <div className="relative mx-2">
+        <div className="relative mx-2 my-2">
           <button 
             onClick={() => setIsDropdownOpen(!isDropdownOpen)} 
-            className="border border-gray-500 px-8 py-2 rounded-full flex "
+            className="border border-gray-500 px-6 py-2 rounded-full flex text-sm md:text-md"
           >
             Sort by Price
             <FaSortDown className="ml-2 absolute top-2 right-3" />
@@ -113,10 +113,10 @@ const BodyRestaurant = ({ search }) => {
             </div>
           )}
         </div>
-        <button onClick={totalResHandler} className='border border-gray-500 px-6 py-2 rounded-full mx-2 text-md'>Total Restaurant</button>
+        <button onClick={totalResHandler} className='border border-gray-500 px-4 py-2 rounded-full mx-2 my-2 text-sm md:text-md'>Total Restaurant</button>
       </div>
 
-      <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {filterData.map((ele) => (
           <Link key={ele.info.id} to={"/restaurantmenu/" + ele.info.id}>
             <RestaurantCard resData={ele} />
