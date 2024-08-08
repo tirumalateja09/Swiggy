@@ -9,8 +9,8 @@ import { TiShoppingCart } from "react-icons/ti";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { useLoggedInfo } from './coustomHooks/useLoggedInfo';
-import { useContext } from 'react';
+
+
 
 
 const Navbar = ({ setSearch }) => {
@@ -19,8 +19,8 @@ const Navbar = ({ setSearch }) => {
   const [check,setcheck]=useState(false)
   
   const [loggedUser, setLoggedUser] = useState(null);
-  const data=useContext(useLoggedInfo)
-  {console.log(data)}
+ 
+  
 
   useEffect(() => {
     const Data=async ()=>{

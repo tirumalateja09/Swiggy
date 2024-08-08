@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy, useState } from "react";
 import Shimmer from "./components/Shimmer";
-import { useLoggedInfo } from "./components/coustomHooks/useLoggedInfo";
+
 
 // Dynamic imports
 const Home = lazy(() => import("./components/Home"));
@@ -15,7 +15,6 @@ const Login=lazy(()=>import('./components/Authentication/Login'))
 const Signin = lazy(() => import("./components/Authentication/Signin"));
 const Footer=lazy(()=>import("./components/Footer"))
 
-const getdata=JSON.parse(localStorage.getItem('loggedUser'))
 
 
 
@@ -24,8 +23,9 @@ export const App = () => {
   const [search,setSearch]=useState(null);
   return (
     <BrowserRouter>
-      <Suspense fallback={<Shimmer/>}>
+
         <Navbar  setSearch={setSearch} />
+      <Suspense fallback={<Shimmer/>}>
         <Routes>
           <Route path='/' element={<Login/>}/>
           <Route path="/home" element={<Home search={search} />} />
