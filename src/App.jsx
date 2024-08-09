@@ -29,7 +29,7 @@ export const App = () => {
       <Suspense fallback={<Shimmer/>}>
         <Navbar  setSearch={setSearch} />
         <Routes>
-          <Route path='/' element={ loginData ?  <Navigate to={'/home'} /> : <Login/> }/>
+          <Route path='/' element={ loginData ?  <Navigate to={'/'} /> : <Login/> }/>
           <Route path="/home" element={<Home search={search} />} />
           <Route path="/restaurantmenu/:resId" element={<RestaurantMenu />} />
           <Route path="/help" element={<Help />} />
