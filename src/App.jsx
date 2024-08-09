@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import { Suspense, lazy, useState } from "react";
 import Shimmer from "./components/Shimmer";
+
 
 
 // Dynamic imports
@@ -21,13 +22,14 @@ const Footer=lazy(()=>import("./components/Footer"))
 
 export const App = () => {
   const [search,setSearch]=useState(null);
+  const loginData=JSON.parse(localStorage.getItem('loggedUser'));
   return (
     <BrowserRouter>
 
       <Suspense fallback={<Shimmer/>}>
         <Navbar  setSearch={setSearch} />
         <Routes>
-          <Route path='/' element={<Login/>}/>
+          <Route path='/' element={ loginData ?  <Navigate to={'/home'} /> : <Login/> }/>
           <Route path="/home" element={<Home search={search} />} />
           <Route path="/restaurantmenu/:resId" element={<RestaurantMenu />} />
           <Route path="/help" element={<Help />} />
