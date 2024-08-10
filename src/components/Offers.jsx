@@ -39,7 +39,7 @@ const Offers = () => {
           <img
             src='https://cdn.grabon.in/gograbon/images/merchant/1610000375685.png'
             alt="img1"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'fit' }}
           />
         </SwiperSlide>
        
@@ -47,28 +47,28 @@ const Offers = () => {
           <img
             src='https://i.pinimg.com/1200x/05/31/64/05316497eb5d1285cba5e872cf1b678c.jpg'
             alt="img1"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'fit' }}
           />
         </SwiperSlide>
         <SwiperSlide style={{ height: '100%' }}>
           <img
             src='https://miro.medium.com/v2/resize:fit:800/0*Br1pcGDQSWIStxf_.jpg'
             alt="img1"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'fit' }}
           />
         </SwiperSlide>
         <SwiperSlide style={{ height: '100%' }}>
           <img
             src='https://media.gettyimages.com/id/1247883341/photo/the-swiggy-logo-is-seen-in-this-illustration-photo-in-warsaw-poland-on-08-march-2023-swiggy.jpg?s=612x612&w=0&k=20&c=unwm7mgHNfXmZneVMnOAcd47z3REmYNe8oAiXaa5PU0='
             alt="img1"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'fit' }}
           />
         </SwiperSlide>
         <SwiperSlide style={{ height: '100%' }}>
           <img
             src='https://static.toiimg.com/thumb/msid-107933408,imgsize-66532,width-838,resizemode-4/107933408.jpg'
             alt="img2"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'fit' }}
           />
         </SwiperSlide>
         <SwiperSlide style={{ height: '100%' }}>

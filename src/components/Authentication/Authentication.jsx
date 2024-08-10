@@ -9,11 +9,10 @@ export const UserProvider = createContext();
 export const Authentication = ({ children }) => {
 
 
-const API="http://localhost:3000"
+// const API="https://swiggyfooddeliveryapp.onrender.com"
+const API="https://swiggyfooddeliveryapp.onrender.com"
 
-// const API = process.env.NODE_ENV === 'production' 
-//   ? 'https://your-public-api-url.com' 
-//   : 'http://localhost:3000';
+
 
 
     const signup = async (data) => {
@@ -37,7 +36,7 @@ const API="http://localhost:3000"
           const loginData = await axios.get(`${API}/users`);
          
           console.log(loginData)
-          if (loginData && loginData.data) {2
+          if (loginData && loginData.data) {
            
             return loginData.data;
           }

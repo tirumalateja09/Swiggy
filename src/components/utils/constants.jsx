@@ -1,6 +1,6 @@
-export const FoodScrollURL='http://localhost:3000/Home_FoodScroll'
+export const FoodScrollURL='https://swiggyfooddeliveryapp.onrender.com/Home_FoodScroll'
 export const FoodScrollCDN="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/"
-export const  TopResScrollURL="http://localhost:3000/TopResScroll"
+export const  TopResScrollURL="https://swiggyfooddeliveryapp.onrender.com/TopResScroll"
 
 
 ///live Api

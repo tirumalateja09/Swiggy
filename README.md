@@ -60,14 +60,13 @@ Start the React application:
 bash
 npm start
 
-Open your browser and navigate to http://localhost:3000.
+Open your browser and navigate to https://swiggyfooddeliveryapp.onrender.com.
 Usage
 Home Page: Browse through various food items.
 Search Bar: Use the search functionality to find specific products.
 Product Sorting: Sort products based on different criteria.
 Cart Management: Add or remove items from the cart.
 Checkout: Proceed to payment using Razorpay.
-
 
 # Key Components
 

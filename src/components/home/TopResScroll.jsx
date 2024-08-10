@@ -3,7 +3,7 @@ import axios from 'axios';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const TopResScroll = () => {
-  const TopResScrollURL = "http://localhost:3000/TopResScroll";
+  const TopResScrollURL = "https://swiggyfooddeliveryapp.onrender.com/TopResScroll";
   const URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
   const [topRes, setTopRes] = useState([]);
   const scrollRef = useRef(null);

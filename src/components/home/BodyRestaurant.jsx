@@ -7,7 +7,7 @@ import { SWIGGY_API } from '../utils/constants';
 import Shimmer from '../Shimmer';
 
 const BodyRestaurant = ({ search }) => {
-  const BodyResURL = "http://localhost:3000/BodyRes";
+  const BodyResURL = "https://swiggyfooddeliveryapp.onrender.com/BodyRes";
   const BodyResCDN = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
   const [resData, setResData] = useState([]);
